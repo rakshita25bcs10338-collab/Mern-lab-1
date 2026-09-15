@@ -1,0 +1,4 @@
+◇ injected env (2) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+DB URL being used: mongodb+srv://rakshita25bcs10338_db_user:4XZN0UpUogebsotj@cluster0.ykvohjc.mongodb.net/shopkart?appName=Cluster0
+Server started at port 8006
+Connected to MongoDB
