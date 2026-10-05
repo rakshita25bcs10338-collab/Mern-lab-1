@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import customerRoutes from './routes/customer.routes.js'
-
+import productRoutes from './routes/product.routes.js'   // with the other imports                 // add this
 dotenv.config()
 
 console.log("DB URL being used:", process.env.dbUrl)
@@ -41,3 +41,5 @@ app.use('/customers', customerRoutes)
 app.listen(port, () => {
     console.log(`Server started at port ${port}`)
 })
+app.use('/customers', customerRoutes)
+app.use('/products', productRoutes)     
