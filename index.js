@@ -7,7 +7,6 @@ import customerRoutes from './routes/customer.routes.js'
 import productRoutes from './routes/product.routes.js'   // with the other imports                 // add this
 dotenv.config()
 
-console.log("DB URL being used:", process.env.dbUrl)
 
 const app = express()
 const port = 8006
