@@ -4,9 +4,10 @@ import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
 import customerRoutes from './routes/customer.routes.js'
-import productRoutes from './routes/product.routes.js'   // with the other imports                 // add this
+import productRoutes from './routes/product.routes.js'
+import wishlistRoutes from './routes/wishlist.routes.js'
+import cartRoutes from './routes/cart.routes.js' 
 dotenv.config()
-
 
 const app = express()
 const port = 8006
@@ -36,9 +37,9 @@ app.get('/', (req, res) => {
 })
 
 app.use('/customers', customerRoutes)
-
+app.use('/products', productRoutes)
+app.use('/wishlist', wishlistRoutes)
+app.use('/cart', cartRoutes)    
 app.listen(port, () => {
     console.log(`Server started at port ${port}`)
 })
-app.use('/customers', customerRoutes)
-app.use('/products', productRoutes)     
